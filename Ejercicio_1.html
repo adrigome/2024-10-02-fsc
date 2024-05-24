@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-4">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de reserva de viaje</title>
+    </head>
+    <body>
+        <center>
+        <table>
+            <tr>
+                <td>
+                    <h1>*Reserva de viaje</h1>
+        
+        <form>
+         <label for="full-name">Nombre completo*:</label><br>
+         <input type="text" id="full-name" name="full-name" placeholder="Nombre y apellido"><br><br>
+                
+         <label for="email">Dirección de correo electronico*:</label><br>
+         <input type="email" id="email" name="imail" placeholder="Dirección de correo electrónico"><br><br>
+
+         <label for="tour-package">Seleccionar paquete turístico*:</label><br>
+         <select id="tour-package" name="tour-package">
+          <option value="goa" selected>Goa</option>
+
+         </select><br><br>
+
+         <label for="arrival-date">Fecha de llegada*:</label><br>
+         <input type="text" id="arrivel-date" name="arrival-date" placeholder="m/d/a"><br><br>
+
+         <label for="number-of-persons">Número de personas*:</label><br>
+         <input type="text" id="number-of-persons" name="number-of-persons" placeholder="Tipo desconocido"><br><br>
+
+         <label>¿Qué te gustaría aprovechar?*</label><br>
+         <input type="checkbox" id="boarding" name="boarding" value="boarding">
+         <label for="boarding">Embarque</label><br>
+         <input type="checkbox" id="fooding" name="fooding" value="fooding">
+         <label for="fooding">Comida</label><br>
+         <input type="checkbox" id="sightseeing" name="sightseeing" value="sightseeing">
+         <label for="sightseeing">Visita turístaca</label><br><br>
+
+         <label for="discount-code">Código de cupon de descuento:</label><br>
+         <input type="text" id="discount-code" name="discount-code" placeholder="Tipo desconocido"><br><br>
+
+         <lable>Términos y condiciones*:</lable><br>
+         <input type="radio" id="agree" name="terms" valye="agree">
+         <label for="agree">Estoy de acuerdo</label><br>
+         <input type="radio" id="dissagree" name="terms" value="disagree">
+         <label for="disagree">No estoy de acuerdo</label><br>
+
+         <button type="submit">Completar reserva</button>
+        </form>
+                </td>
+            </tr>
+        </table>
+            
+        </center>
+    </body>
+</html>
