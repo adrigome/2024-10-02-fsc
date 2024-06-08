@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materiales de Construcción Ligera</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <style>
+    .product-image {
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .product-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+    .cart-items li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .cart-items li button {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Materiales de Construcción Ligera</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero bg-dark text-white py-5">
+      <div class="container text-center">
+        <h1>Materiales de Construcción Ligera</h1>
+        <p>Encuentra todo lo que necesitas para tus proyectos de construcción.</p>
+        <a href="#" class="btn btn-primary">Comprar Ahora</a>
+      </div>
+    </section>
+
+    <section class="products py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="ladrillo.jpg" alt="Ladrillo">
+              </div>
+              <h3 class="mt-3">Ladrillos</h3>
+              <p>Ladrillos de alta calidad para tus proyectos.</p>
+              <p>Precio: $2.50 c/u</p>
+              <p>Disponibilidad: 50 unidades</p>
+              <button class="btn btn-primary" onclick="addToCart('Ladrillos')">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="cemento.jpg" alt="Cemento">
+              </div>
+              <h3 class="mt-3">Cemento</h3>
+              <p>Cemento de primera calidad para construcción.</p>
+              <p>Precio: $8.00 x saco</p>
+              <p>Disponibilidad: 100 sacos</p>
+              <button class="btn btn-primary" onclick="addToCart('Cemento')">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="arena.jpg" alt="Arena">
+              </div>
+              <h3 class="mt-3">Arena</h3>
+              <p>Arena fina y gruesa para tus mezclas.</p>
+              <p>Precio: $6.00 x m³</p>
+              <p>Disponibilidad: 50 m³</p>
+              <button class="btn btn-primary" onclick="addToCart('Arena')">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="grava.jpg" alt="Grava">
+              </div>
+              <h3 class="mt-3">Grava</h3>
+              <p>Grava de diferentes granulometrías.</p>
+              <p>Precio: $7.50 x m³</p>
+              <p>Disponibilidad: 40 m³</p>
+              <button class="btn btn-primary" onclick="addToCart('Grava')">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="bloques.jpg" alt="Bloques">
+              </div>
+              <h3 class="mt-3">Bloques</h3>
+              <p>Bloques de concreto resistentes y duraderos.</p>
+              <p>Precio: $1.80 c/u</p>
+              <p>Disponibilidad: 80 unidades</p>
+              <button class="btn btn-primary" onclick="addToCart('Bloques de Concreto')">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="clavos.jpg" alt="Clavos">
+              </div>
+              <h3 class="mt-3">Clavos</h3>
+              <p>Clavos de acero galvanizado para construcción.</p>
+              <p>Precio: $3.50 x kg</p>
+              <p>Disponibilidad: 20 kg</p>
+              <button class="btn btn-primary" onclick="addToCart('Clavos')">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="tornillos.jpg" alt="Tornillos">
+              </div>
+              <h3 class="mt-3">Tornillos</h3>
+              <p>Tornillos de alta resistencia para trabajos pesados.</p>
+              p>Precio: $4.00 x caja</p>
+              <p>Disponibilidad: 30 cajas</p>
+              <button class="btn btn-primary" onclick="addToCart('Tornillos')">Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card mb-4">
+              <div class="product-image">
+                <img src="yeso.jpg" alt="Yeso">
+              </div>
+              <h3 class="mt-3">Yeso</h3>
+              <p>Yeso de construcción para acabados y revestimientos.</p>
+              <p>Precio: $12.00 x saco</p>
+              <p>Disponibilidad: 60 sacos</p>
+              <button class="btn btn-primary" onclick="addToCart('Yeso')">Agregar al Carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart bg-light py-5">
+      <div class="container">
+        <h2>Carrito de Compras</h2>
+        <ul class="cart-items" id="cart-items">
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Sobre Nosotros</h4>
+          <p>Somos una empresa dedicada a la venta de materiales de construcción ligera de alta calidad. Ofrecemos productos confiables y un excelente servicio al cliente.</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Contacto</h4>
+          <p>Teléfono: +1 (123) 456-7890</p>
+          <p>Correo: info@materialesligeros.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const cartItems = [];
+
+    function addToCart(item) {
+      cartItems.push(item);
+      updateCartItems();
+    }
+
+    function removeFromCart(index) {
+      cartItems.splice(index, 1);
+      updateCartItems();
+    }
+
+    function updateCartItems() {
+      const cartItemsElement = document.getElementById('cart-items');
+      cartItemsElement.innerHTML = '';
+
+      for (let i = 0; i < cartItems.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = cartItems[i];
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Eliminar';
+        removeButton.onclick = () => removeFromCart(i);
+        li.appendChild(removeButton);
+        cartItemsElement.appendChild(li);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input');
+      const filterSelect = document.getElementById('filter-select');
+
+      searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(card => {
+          const productName = card.querySelector('h3').textContent.toLowerCase();
+          if (productName.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+
+      filterSelect.addEventListener('change', () => {
+        const selectedFilter = filterSelect.value;
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(card => {
+          if (selectedFilter === 'all' || card.querySelector('p:nth-child(4)').textContent.includes(selectedFilter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
